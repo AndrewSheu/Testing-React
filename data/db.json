@@ -1,0 +1,11 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "title": "Big Mac",
+      "price": 30,
+      "img": "https://mcdonalds.com.au/sites/mcdonalds.com.au/files/product-Big-Mac-desktop-2023-0926.png"
+    }
+  ],
+  "feedback": []
+}
