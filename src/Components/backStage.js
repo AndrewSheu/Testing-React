@@ -1,8 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import useFetch from "../Hooks/useFetch";
 
 function BackStage() {
-  const [data, setData] = useState([]);
 
   const deleteMsg = (id) => {
     fetch(`http://localhost:8000/feedback/${id}`, {
@@ -17,15 +16,7 @@ function BackStage() {
     });
   };
 
-  useEffect(() => {
-    fetch("http://localhost:8000/feedback")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
+  const [ data ] = useFetch("http://localhost:8000/feedback");
 
   return (
     <div className="box">
